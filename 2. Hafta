@@ -1,0 +1,20 @@
+1. Listedeki tüm parantezleri recursive bir şekilde kaldıran flatten fonksiyonu: 
+
+def flatten(x, flattened_list = []):
+    for i in range(len(x)):
+        if isinstance(x[i], list):
+            flatten(x[i])
+        else: 
+            flattened_list.append(x[i])
+    return flattened_list 
+    
+ 2. Listeyi ve alt listelerin tamamını recursive bir şekilde tersine çeviren reverser fonksiyonu:
+ 
+ def reverser(x):
+    for i in range(len(x)):
+        if isinstance(x[i], list):
+            x[i].reverse()
+            reverser(x[i])
+        else: 
+            pass
+    return(x[::-1])
