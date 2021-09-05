@@ -106,39 +106,35 @@ insert into employee (name, birthday, email) values ('Tim', '1932/09/10', 'tjust
 
 
 3)
+
 UPDATE employee
-	SET name='Mert',
-		email='makin@gmail.com'
-	WHERE name ILIKE '%a%a%';
+	SET name = 'Juice WRLD'
+	WHERE id IN (15,19,30,32,46);
 
 UPDATE employee
 	SET birthday = current_timestamp
 	WHERE birthday IS NULL;
 
 UPDATE employee
-	SET email = 'info@mert.com'
+	SET email = 'info@mezzo.com'
 	WHERE email IS NULL;
 
-UPDATE employee
-	SET name = 'Juice WRLD'
-	WHERE id IN (20,25,30,35,45);
 
 UPDATE employee
-	SET name = 'No T in this name!'
+	SET name = 'No X in this name!'
 	WHERE name LIKE '%t';
 
 4)
+DELETE FROM employee 
+    WHERE birthday <= '1990-06-11';
+DELETE FROM employee 
+    WHERE birthday >= '2002-01-01';
 DELETE FROM employee
-	WHERE id IN (21,23,25,27,29,31);
-
+	WHERE id IN (12,23,25);
 DELETE FROM employee
 	WHERE email LIKE '%.com';
-
 DELETE FROM employee
 	WHERE name LIKE 'H%';
 
-DELETE FROM employee 
-    WHERE birthday >= '2020-01-01';
 
-DELETE FROM employee 
-    WHERE birthday <= '1980-01-01';
+
